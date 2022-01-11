@@ -1,4 +1,4 @@
-package pers.cls.arrayqueue;
+package pers.cls.queue;
 
 import java.util.Scanner;
 
