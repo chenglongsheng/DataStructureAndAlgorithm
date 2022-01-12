@@ -13,6 +13,11 @@ public class SingleLinkedList {
         point.next = studentNode;
     }
 
+    public void insert(Node<Student> studentNode,Node<Student> before) {
+        studentNode.next = before.next;
+        before.next = studentNode;
+    }
+
     public void show() {
         if (head.next == null) {
             System.out.println("链表为空");
