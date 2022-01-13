@@ -13,6 +13,20 @@ public class SingleLinkedList {
         point.next = studentNode;
     }
 
+    public void delete(Node<Student> studentNode) {
+        if (head.next == null) {
+            System.out.println("链表为空");
+        }
+        Node<Student> point = head;
+        while (point.next != null) {
+            if (studentNode.data.getNo().equals(point.next.data.getNo())) {
+                point.next = point.next.next;
+                break;
+            }
+            point = point.next;
+        }
+    }
+
     /**
      * @param studentNode no唯一，改动名字
      */

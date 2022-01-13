@@ -22,7 +22,7 @@ public class SingleLinkedListDemo {
         list.insert(node4,node1);
         list.update(new Node<>(new Student(4, "张三的儿子")));
 
-//        list.delete(new Node<>(new Student(1, "张三的儿子")));
+        list.delete(new Node<>(new Student(1, "张三的儿子")));
 
         list.show();
     }
