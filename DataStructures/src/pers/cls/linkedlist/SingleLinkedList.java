@@ -13,7 +13,24 @@ public class SingleLinkedList {
         point.next = studentNode;
     }
 
-    public void insert(Node<Student> studentNode,Node<Student> before) {
+    /**
+     * @param studentNode no唯一，改动名字
+     */
+    public void update(Node<Student> studentNode) {
+        if (head.next == null) {
+            System.out.println("链表为空");
+        }
+        Node<Student> point = head;
+        while (point.next != null) {
+            point = point.next;
+            if (studentNode.data.getNo().equals(point.data.getNo())) {
+                point.data.setName(studentNode.data.getName());
+                break;
+            }
+        }
+    }
+
+    public void insert(Node<Student> studentNode, Node<Student> before) {
         studentNode.next = before.next;
         before.next = studentNode;
     }
