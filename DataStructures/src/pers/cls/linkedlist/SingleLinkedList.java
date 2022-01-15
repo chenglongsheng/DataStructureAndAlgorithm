@@ -60,4 +60,33 @@ public class SingleLinkedList {
         }
     }
 
+    /**
+     * 查找单链表的倒数第k个节点
+     */
+    public Node<Student> getBottomNode(int bottomIndex) {
+        int size = getSize();
+        if (bottomIndex > size) {
+            System.out.println("越界");
+            return null;
+        } else {
+            Node<Student> point = head;
+            int index = 1;
+            while (index <= (size - bottomIndex + 1)) {
+                point = point.next;
+                index++;
+            }
+            return point;
+        }
+    }
+
+    public int getSize() {
+        Node<Student> point = head;
+        int num = 0;
+        while (point.next != null) {
+            num++;
+            point = point.next;
+        }
+        return num;
+    }
+
 }

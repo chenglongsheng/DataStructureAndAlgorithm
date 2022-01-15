@@ -24,6 +24,8 @@ public class SingleLinkedListDemo {
 
         list.delete(new Node<>(new Student(1, "张三的儿子")));
 
+        System.out.println("list.getBottomNode(1) = " + list.getBottomNode(1));
+
         list.show();
     }
 
