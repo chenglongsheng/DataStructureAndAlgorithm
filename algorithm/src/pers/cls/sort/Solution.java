@@ -32,4 +32,17 @@ public class Solution {
         return slowIndex;
     }
 
+    public int removeDuplicates(int[] nums) {
+        int slowIndex = 0;
+        for (int fastIndex = 1; fastIndex < nums.length; fastIndex++) {
+            if (nums[fastIndex] != nums[fastIndex - 1]) {
+                nums[slowIndex] = nums[fastIndex];
+                slowIndex++;
+            }
+        }
+        return slowIndex;
+    }
+
+
+
 }
